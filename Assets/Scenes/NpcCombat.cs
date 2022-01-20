@@ -16,6 +16,16 @@ public class NpcCombat : MonoBehaviour {
     private int actualTime = 0;
     private bool timeRunning = false;
 
+    public GameObject player1Status;
+    public GameObject player2Status;
+
+    private PlayerCombatData playerCombatData;
+    private PlayerCombatData npcCombatData;
+
+    //Combat
+    public static bool RoundRunning = false;
+
+
     void Start() {
         StartTimer(10);
     }
@@ -24,7 +34,66 @@ public class NpcCombat : MonoBehaviour {
         if (timeRunning) TimeOver();
     }
 
+    //NPC
+    public void SetNpcData()
+    {
 
+    }
+
+    //PLAYER
+    public void SetPlayerData()
+    {
+        //playerCombatData = 
+    }
+
+    //Combat
+	public void StartBattle()
+    {
+
+    }
+
+    public void FinishBattle()
+    {
+
+    }
+
+    public void StartRound()
+    {
+        //Start round timer
+        StartTimer(20);
+        RoundRunning = false;
+    }
+
+    public void RoundTimeOver()
+    {
+        //Stoping round
+        RoundRunning = false;
+        CloseTimer();
+        FinishRound();
+    }
+
+    public void FinishRound()
+    {
+        if( playerCombatData.playerLife <= 0 || npcCombatData.playerLife <= 0)
+        {
+            FinishBattle();
+        } else
+        {
+
+        }
+    }
+
+    public void showResults()
+    {
+        //show top selected actack
+        //show battle result on middle
+        //restart to intial round position
+    }
+
+    
+
+
+    //Timers
     public void StartTimer(int sec) {
         timeSeconds = sec;
         timeRunning = true;
@@ -42,8 +111,10 @@ public class NpcCombat : MonoBehaviour {
 
     private void TimeOver(){
         if (getTime() == 0) {
-            Debug.Log("Time is over");
-            CloseTimer();
+            if (RoundRunning)
+            {
+                RoundTimeOver();
+            } 
         } else {
             timerText.GetComponent<Text>().text = getTime().ToString();
         }

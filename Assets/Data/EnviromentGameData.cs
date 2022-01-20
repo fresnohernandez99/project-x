@@ -30,8 +30,6 @@ public class EnviromentGameData : Singleton<EnviromentGameData>
             playerCombatData.playerLevel = psd.playerLevel;
             playerCombatData.selectedClass = psd.selectedClass;
             playerCombatData.playerLife = psd.playerLife;
-            playerCombatData.money = psd.money;
-            playerCombatData.nextLevelPoints = psd.nextLevelPoints;
             playerCombatData.pi = psd.pi;
         }
     }

@@ -8,6 +8,30 @@ TextureImporter:
   - first:
       213: -7112957322801022424
     second: square
+  - first:
+      213: 5076338271455476429
+    second: char_border
+  - first:
+      213: 1536748853934505241
+    second: square_btn
+  - first:
+      213: -8258638028336931820
+    second: circle_btn
+  - first:
+      213: 955402049780830875
+    second: rect_horizontal
+  - first:
+      213: 6301017356223084319
+    second: clock_stop
+  - first:
+      213: -1166780278329889463
+    second: battle_ui_details_7
+  - first:
+      213: -3229036684554717817
+    second: clock_ring_1
+  - first:
+      213: 6856503441518710401
+    second: clock_ring_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -142,7 +166,7 @@ TextureImporter:
         height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 2, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -163,13 +187,181 @@ TextureImporter:
         height: 200
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 5, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 82a7eef3003b94d90800000000000000
       internalID: -7112957322801022424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_border
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 220
+        width: 100
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcaf2d523c6c27640800000000000000
+      internalID: 5076338271455476429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: square_btn
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d31cbc0f0a35510800000000000000
+      internalID: 1536748853934505241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: circle_btn
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 23
+        width: 100
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cd178287c636d80800000000000000
+      internalID: -8258638028336931820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rect_horizontal
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 23
+        width: 292
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92ddd23a15424d00800000000000000
+      internalID: 955402049780830875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock_stop
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 122
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f177f39b6e5b17750800000000000000
+      internalID: 6301017356223084319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_ui_details_7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 122
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d273bc483cecfe0800000000000000
+      internalID: -1166780278329889463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock_ring_1
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 25
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 785396a5e382033d0800000000000000
+      internalID: -3229036684554717817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock_ring_2
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 25
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e47f08d81372f50800000000000000
+      internalID: 6856503441518710401
       vertices: []
       indices: 
       edges: []
