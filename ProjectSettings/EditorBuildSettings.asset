@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Gui/Screens/MainMenu.unity
+    guid: b97043a8c7b8a453694ba0ddc7d70f12
+  - enabled: 1
+    path: Assets/Gui/Screens/Login.unity
+    guid: 8bbd1deb118524559955c10c3c7b050b
+  - enabled: 1
+    path: Assets/Gui/Screens/Options.unity
+    guid: 46da9d697ef9f4005b1224354b849037
+  - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
+    guid: 2520759d170c54069ab388573b7333c9
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 42cb4f3fbe3d84fe482674dd54c73171,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 27b33a57f10b64e2899f7c156553c5dc,
+      type: 2}

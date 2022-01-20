@@ -1,0 +1,32 @@
+Key,Id,English(en),Spanish(es)
+BTN_START,1,START,INICIAR
+BTN_OPTIONS,2,OPTIONS,OPCIONES
+BTN_ABOUT,3,ABOUT,ACERCA DE
+BTN_EXIT,4,EXIT,SALIR
+TITLE_LOGIN,5,Give me your name noob,Dame tu nombre novato
+HINT_LOGIN,6,Nickname,Nombre
+BTN_CONTINUE,7,Continue,Continuar
+ONLINE,8,You are connected,Te has conectado
+MUSIC_VOLUME,9,Music Volume,Volumen de la música
+SOUND_VOLUME,10,Sound Volume,Volumen del juego
+SERVER_IP,11,Server IP,IP del Servidor
+CHECK_SERVER,12,Check Server,Probar Servidor
+DIALOG_BAD_ADDRESS,13,This is not a valid IP,El IP no es real
+DIALOG_BAD_NAME,14,There are not valid characters on your nickname,Hay caracteres no válidos en tu nombre
+ALERT,15,ALERT!,ALERTA!
+INVENTARY,16,Inventary,Inventario
+ATACK,17,Atack!,Atacar!
+ACTION,18,Action,Accionar
+NOTIFICATION,19,Notification,Mensaje
+BATTLE_CONFIRMATION,20,You are been invoke,Has sido invocado
+IS_INVOKE,21, A player is invoking you to a duel. Do you agree?, Un jugador te convoca a pelear. Aceptas?
+OFFLINE,22,You are disconnected,Te has desconectado
+SAVES_RESET,23,Reset Saves,Eliminar Salvas
+BTN_ACCEPT,24,Accept,Aceptar
+BTN_CANCEL,25,Cancel,Cancelar
+BTN_RETRAY,26,Retray,Reintentar
+BTN_SELECT_CLASS,27,Select your class,Selecciona tu clase
+WARRIOR,28,Melee,Cerca
+ARCHER,29,Distance,A distancia
+THIEF,30,Slippery,Escurridizo
+DIALOG_NOT_CLASS_SELECTED,31,Select a class,Selecciona una clase

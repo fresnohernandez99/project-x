@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: GuiTexts Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: GuiTexts
+  m_TableCollectionNameGuidString: 958ebacbbdf144aa882e9e659cd914f3
+  m_Entries:
+  - m_Id: 1
+    m_Key: BTN_START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2
+    m_Key: BTN_OPTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Key: BTN_ABOUT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Key: BTN_EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Key: TITLE_LOGIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Key: HINT_LOGIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Key: BTN_CONTINUE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Key: MUSIC_VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Key: SOUND_VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Key: SERVER_IP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Key: CHECK_SERVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Key: DIALOG_BAD_ADDRESS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Key: DIALOG_BAD_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Key: ALERT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Key: INVENTARY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Key: ATACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Key: ACTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 19
+    m_Key: NOTIFICATION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Key: BATTLE_CONFIRMATION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Key: IS_INVOKE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Key: OFFLINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Key: ONLINE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Key: SAVES_RESET
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Key: BTN_ACCEPT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25
+    m_Key: BTN_CANCEL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Key: BTN_RETRAY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27
+    m_Key: BTN_SELECT_CLASS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28
+    m_Key: WARRIOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29
+    m_Key: ARCHER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30
+    m_Key: THIEF
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31
+    m_Key: DIALOG_NOT_CLASS_SELECTED
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1640998424777
