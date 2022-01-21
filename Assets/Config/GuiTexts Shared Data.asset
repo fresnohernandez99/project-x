@@ -139,6 +139,10 @@ MonoBehaviour:
     m_Key: DIALOG_NOT_CLASS_SELECTED
     m_Metadata:
       m_Items: []
+  - m_Id: 32
+    m_Key: DIALOG_ARE_YOU_READY
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

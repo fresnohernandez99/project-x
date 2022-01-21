@@ -7,12 +7,16 @@ public class PlayerCombatData : GameData
 {
     //Constants
     //status
-    public static string SELECTING = "selecting";
-    public static string WAITING = "waiting";
+    public const string SELECTING = "selecting";
+    public const string WAITING = "waiting";
     //atacks
-    public static int STONE = 1;
-    public static int PAPER = 2;
-    public static int SCISSORS = 3;
+    public const int STONE = 1;
+    public const int PAPER = 2;
+    public const int SCISSORS = 3;
+    //result
+    public const int NONE_YET = 0;
+    public const int PLAYER = 1;
+    public const int NPC = 2;
 
 
     public int playerLife = 100;
@@ -27,8 +31,25 @@ public class PlayerCombatData : GameData
 
     public string playerStatus = SELECTING;
 
-    public int playerAtackSelected = 0;
+    public int playerAttackSelected = 0;
 
-    public PlayerSharedData? enemy = null;
+    public PlayerCombatData? enemy = null;
+    public int enemyAttackSelected = 0;
+
+    public int roundResult = NONE_YET;
+
+    public void ResetForPlayerBattle(PlayerCombatData newEnemy) {
+        playerLife = EnviromentGameData.Instance.playerSavedData.playerLife;
+        playerName = EnviromentGameData.Instance.playerSavedData.playerName;
+        playerLevel = EnviromentGameData.Instance.playerSavedData.playerLevel;
+        pi = EnviromentGameData.Instance.playerSavedData.pi;
+        selectedClass = EnviromentGameData.Instance.playerSavedData.selectedClass;
+        playerStatus = SELECTING;
+        playerAttackSelected = 0;
+        enemy = newEnemy;
+        enemyAttackSelected = 0;
+        roundResult = NONE_YET;
+
+    }
 
 }

@@ -30,3 +30,4 @@ WARRIOR,28,Melee,Cerca
 ARCHER,29,Distance,A distancia
 THIEF,30,Slippery,Escurridizo
 DIALOG_NOT_CLASS_SELECTED,31,Select a class,Selecciona una clase
+DIALOG_ARE_YOU_READY,32,Are you ready?,Estás listo?

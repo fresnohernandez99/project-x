@@ -142,5 +142,9 @@ MonoBehaviour:
     m_Localized: Select a class
     m_Metadata:
       m_Items: []
+  - m_Id: 32
+    m_Localized: Are you ready?
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

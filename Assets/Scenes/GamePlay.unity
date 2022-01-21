@@ -1937,6 +1937,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1335526145607013225, guid: cb89e37fb66774c13abddbf8a000faa5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1644411283}
+    - target: {fileID: 1335526145607013225, guid: cb89e37fb66774c13abddbf8a000faa5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335526145607013225, guid: cb89e37fb66774c13abddbf8a000faa5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GamePlayHud, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335526145607013225, guid: cb89e37fb66774c13abddbf8a000faa5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3092542454597657020, guid: cb89e37fb66774c13abddbf8a000faa5,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2027,6 +2047,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3975843830309400809, guid: cb89e37fb66774c13abddbf8a000faa5,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1895176848}
     - target: {fileID: 9052024176291183768, guid: cb89e37fb66774c13abddbf8a000faa5,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2199,6 +2224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BadGuyExplorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4643001411412360096, guid: 16808e02d481245e2b063bf5dc2dd0f7,
+        type: 3}
+      propertyPath: isNpc
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16808e02d481245e2b063bf5dc2dd0f7, type: 3}
@@ -2913,6 +2943,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 959698351}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1644411283 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3975843830309400809, guid: cb89e37fb66774c13abddbf8a000faa5,
+    type: 3}
+  m_PrefabInstance: {fileID: 959698351}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644411282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de20da9e0f9d143b880e952a3b084c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1688154386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,6 +3127,12 @@ Transform:
   m_Father: {fileID: 292004779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1895176848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2299664087655992919, guid: edd2eb4b4e51848d4861a38976e82ec1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2299664087036309617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1898933098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7242321185173358440, guid: c3b7e356a1e3f4946a0ba0b1fa53a475,

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -13,6 +15,11 @@ public class PlayerScript : MonoBehaviour
     public Animator anim;
     public GameObject rays;
     public GameObject hud;
+
+    public GameObject? actualEnemy;
+
+    private EventManager em = (EventManager)EventManager.Instance;
+    private NetworkManager nm = (NetworkManager)NetworkManager.Instance;
 
     void Start() { 
         rb.freezeRotation = true;
@@ -49,9 +56,15 @@ public class PlayerScript : MonoBehaviour
                 break;
             case "BadGuy":
                 hud.GetComponent<GamePlayHud>().SetAttackActive(true);
+
+                em.StartListening(EventManager.ACCEPT_BATTLE, new Action<string>(BattleAccepted));
+                em.StartListening(EventManager.DECLINE_BATTLE, new Action<string>(BattleDeclined));
+
+                actualEnemy = col.gameObject;
                 break;
                 
         }
+
         Debug.Log(col.gameObject.tag + " : " + gameObject.name + " : " + Time.time);
     }
 
@@ -63,9 +76,38 @@ public class PlayerScript : MonoBehaviour
                 break;
             case "BadGuy":
                 hud.GetComponent<GamePlayHud>().SetAttackActive(false);
+
+                em.StopListening(EventManager.ACCEPT_BATTLE, new Action<string>(BattleAccepted));
+                em.StopListening(EventManager.DECLINE_BATTLE, new Action<string>(BattleDeclined));
+
+                actualEnemy = null;
                 break;
-                
         }
-        Debug.Log(col.gameObject.tag + " : " + gameObject.name + " : " + Time.time);
     }
+
+    public void AskForBattle()
+    {
+        if (actualEnemy != null)
+        {
+            actualEnemy.GetComponent<BattleGuest>().AskForBattle();
+        }
+    }
+
+
+    public void BattleAccepted(string _noData)
+    {
+        //if is npc go npc battle scene else go multiplayer
+        if (actualEnemy.GetComponent<BattleGuest>().isNpc)
+            SceneManager.LoadScene(4);
+    }
+
+    public void BattleDeclined(string _noData)
+    {
+        Debug.Log("The battle was declined");
+        em.StopListening(EventManager.ACCEPT_BATTLE, new Action<string>(BattleAccepted));
+        em.StopListening(EventManager.DECLINE_BATTLE, new Action<string>(BattleDeclined));
+
+        actualEnemy = null;
+    }
+
 }

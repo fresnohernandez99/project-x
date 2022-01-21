@@ -17,6 +17,9 @@ using System.Collections.Generic;
 public class EventManager : Singleton<EventManager>
 {
 
+    public const string ACCEPT_BATTLE = "accept_battle";
+    public const string DECLINE_BATTLE = "decline_battle";
+
     public static Dictionary<string, Action<string>> eventDictionary;
 
     private void InitDict(){

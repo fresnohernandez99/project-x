@@ -7,11 +7,14 @@ using UnityEngine.Events;
 public class GamePlayHud : MonoBehaviour
 {
     public GameObject attack;
-    public GameObject attackPlayer;
     public GameObject action;
     public GameObject playerClass;
     public GameObject playerName;
     public GameObject itemCount;
+    public GameObject actualColor;
+    public GameObject actualColorIndicator; 
+
+    public GameObject player;
 
     private bool goLeft = true;
 
@@ -21,7 +24,6 @@ public class GamePlayHud : MonoBehaviour
     void Start()
     {
         attack.SetActive(false);
-        attackPlayer.SetActive(false);
         action.SetActive(false);
         
         var actualName = EnviromentGameData.Instance.playerSavedData.playerName;
@@ -29,6 +31,9 @@ public class GamePlayHud : MonoBehaviour
 
         var potionCount = EnviromentGameData.Instance.playerSavedData.pi.healthPotions.ToString();
         itemCount.GetComponent<Text>().text = potionCount;
+
+        var money = EnviromentGameData.Instance.playerSavedData.money;
+        actualColor.GetComponent<Text>().text = money.ToString();
     }
 
     // Update is called once per frame
@@ -41,11 +46,12 @@ public class GamePlayHud : MonoBehaviour
         attack.SetActive(active); 
     }
 
-    public void SetAttackPlayerActive(bool active){
-        attackPlayer.SetActive(active); 
-    }
-
     public void SetActionActive(bool active){
         action.SetActive(active); 
+    }
+
+    public void Attack()
+    {
+        player.GetComponent<PlayerScript>().AskForBattle();
     }
 }

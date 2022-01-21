@@ -5,6 +5,11 @@ using System.Collections.Generic;
 [Serializable]
 public class PlayerSavedData : GameData
 {
+    public const string WARRIOR = "warrior";
+    public const string ARCHER = "archer";
+    public const string THIEF = "thief";
+    public static string[] CLASSES = new string[] { "warrior", "archer", "thief" };
+
     public bool isNoob = true;
 
     public string serverIp = "127.0.0.1";

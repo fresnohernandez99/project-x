@@ -17,4 +17,5 @@ public class PlayerSharedData : GameData
     public Vector2 position = new Vector2(0, 0);
     
 	public string selectedClass = "none_yet";
+
 }

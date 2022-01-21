@@ -142,5 +142,9 @@ MonoBehaviour:
     m_Localized: Selecciona una clase
     m_Metadata:
       m_Items: []
+  - m_Id: 32
+    m_Localized: "Est\xE1s listo?"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
