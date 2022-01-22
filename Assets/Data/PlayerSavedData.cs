@@ -24,11 +24,11 @@ public class PlayerSavedData : GameData
 
     public int playerLevel = 1;
     
-    public float music = 100.0F;
+    public float music = 0.2F;
 
-	public float sfx = 100.0F;
+	public float sfx = 0.2F;
 	
-    public PlayerInventary pi = null;
+    public PlayerInventary pi = new PlayerInventary();
 
 	public string selectedClass = "none_yet";
 }

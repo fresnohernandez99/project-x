@@ -21,7 +21,9 @@ public class PlayerCombatData : GameData
 
     public int playerLife = 100;
 
-	public string playerName = "";
+    public int damageTaken = 0;
+
+    public string playerName = "";
 
     public int playerLevel = 1;
     
@@ -31,10 +33,9 @@ public class PlayerCombatData : GameData
 
     public string playerStatus = SELECTING;
 
-    public int playerAttackSelected = 0;
+    public int actionSelected = 0;
 
     public PlayerCombatData? enemy = null;
-    public int enemyAttackSelected = 0;
 
     public int roundResult = NONE_YET;
 
@@ -45,9 +46,8 @@ public class PlayerCombatData : GameData
         pi = EnviromentGameData.Instance.playerSavedData.pi;
         selectedClass = EnviromentGameData.Instance.playerSavedData.selectedClass;
         playerStatus = SELECTING;
-        playerAttackSelected = 0;
+        actionSelected = 0;
         enemy = newEnemy;
-        enemyAttackSelected = 0;
         roundResult = NONE_YET;
 
     }

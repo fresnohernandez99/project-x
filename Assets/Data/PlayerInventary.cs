@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class PlayerInventary : GameData
 {
 
-    public int healthPotions = 0;
+    public int healthPotions = 5;
 
     public int armorLevel = 1;
 

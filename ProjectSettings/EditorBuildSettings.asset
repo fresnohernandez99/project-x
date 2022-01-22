@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NpcCombat.unity
     guid: 1e53db39a5bf045aebfe90f587352868
+  - enabled: 1
+    path: Assets/Scenes/Cinematic.unity
+    guid: d1b63cd7a862a4965b99bf4e9d0054eb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 42cb4f3fbe3d84fe482674dd54c73171,
       type: 2}

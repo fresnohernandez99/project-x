@@ -20,6 +20,9 @@ public class EventManager : Singleton<EventManager>
     public const string ACCEPT_BATTLE = "accept_battle";
     public const string DECLINE_BATTLE = "decline_battle";
 
+    //combat
+    public const string WAIT_FOR_RESULT = "wait_for_result";
+
     public static Dictionary<string, Action<string>> eventDictionary;
 
     private void InitDict(){

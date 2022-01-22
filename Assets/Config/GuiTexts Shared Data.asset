@@ -143,6 +143,66 @@ MonoBehaviour:
     m_Key: DIALOG_ARE_YOU_READY
     m_Metadata:
       m_Items: []
+  - m_Id: 33
+    m_Key: CRITIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Key: MISS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Key: CINE_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Key: CINE_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Key: CINE_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Key: CINE_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Key: CINE_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Key: CINE_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Key: CINE_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Key: CINE_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Key: CINE_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Key: CINE_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46
+    m_Key: CINE_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47
+    m_Key: WIN_BATTLE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48
+    m_Key: LOSE_BATTLE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

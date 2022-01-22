@@ -43,7 +43,7 @@ public class Login : MonoBehaviour
         } else {
             EnviromentGameData.Instance.UpdatePlayer(newName, selectedClass);
             SecurePlayerPrefs.SaveGameData();
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(5);
         }
     }
 

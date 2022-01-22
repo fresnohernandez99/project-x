@@ -31,3 +31,18 @@ ARCHER,29,Distance,A distancia
 THIEF,30,Slippery,Escurridizo
 DIALOG_NOT_CLASS_SELECTED,31,Select a class,Selecciona una clase
 DIALOG_ARE_YOU_READY,32,Are you ready?,Estás listo?
+CRITIC,33,Critic!!!,Crítico!!!
+MISS,34,Miss,Falló
+CINE_1,35,-Hello who's there?, Hola quién está ahí?
+CINE_2,37,-Oh! You are a young gentleman from the physical world.,-Ah! Eres un joven caballero del mundo físico.
+CINE_3,38,-My name is Rock. I assume you're here for the village feud.,-Mi nombre es Roco. Asumo que vienes por la contienda de la aldea.
+CINE_4,39,-Oh no?! Are you only interested in fighting? That's crazy!!! Or not?,-Ah no?! Solo te interesa pelear??? Qué loco!!! O no?
+CINE_5,40,-Everyone!! they want to save the color. Pffff! What nonsense!,-Todos!! quieren salvar el color. Pufff! Qué tontería!
+CINE_6,41,-This world has no solution. Everything is black or white.,-Este mundo ya no tiene solución. Todo es blanco o negro.
+CINE_7,42,-I'm not interested in color. Or am I interested?,-A mí no me interesa el color. O sí me interesa!?
+CINE_8,43,-No no no... Yes!!!,-No no no ... Sí!!!
+CINE_9,44,-Let's make a Deal. Bring me color and I'll get you a very strong opponent. Or not?!,-Hagamos un trato. Tráeme color y te conseguiré un oponente muy fuerte. O no?!
+CINE_10,45,-Yes bring me color.,-Sí traéme color.
+CINE_11,46,-I'm a good soul... Or am I?! HA HA HA HA HA HA HA....,-Soy una buena alma ... O no?!  JA JA JA JA ja ja ja....
+WIN_BATTLE,47,Good Victory!!!,Buena Victoria!!!
+LOSE_BATTLE,48,You lose,Has perdido

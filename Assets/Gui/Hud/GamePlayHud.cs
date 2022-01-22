@@ -27,13 +27,21 @@ public class GamePlayHud : MonoBehaviour
         action.SetActive(false);
         
         var actualName = EnviromentGameData.Instance.playerSavedData.playerName;
-        playerName.GetComponent<Text>().text = actualName;
+        var actualLevel = EnviromentGameData.Instance.playerSavedData.playerLevel;
+        playerName.GetComponent<Text>().text = $"{actualName} ({actualLevel})";
 
         var potionCount = EnviromentGameData.Instance.playerSavedData.pi.healthPotions.ToString();
         itemCount.GetComponent<Text>().text = potionCount;
 
         var money = EnviromentGameData.Instance.playerSavedData.money;
         actualColor.GetComponent<Text>().text = money.ToString();
+
+        if (money < 256)
+            actualColorIndicator.GetComponent<Image>().color = new Color32((byte)money, 0, 0, 100);
+        else if (money < 510)
+            actualColorIndicator.GetComponent<Image>().color = new Color32(0, (byte)money, 0, 100);
+        else
+            actualColorIndicator.GetComponent<Image>().color = new Color32(0, 0, (byte)money, 100);
     }
 
     // Update is called once per frame

@@ -8,6 +8,7 @@ public class GamePlayScript : MonoBehaviour
     public GameObject clouds2;
     public GameObject clouds3;
     public GameObject clouds4;
+    public AudioSource desertSound;
 
     public float Cloud1Speed = 0.0000000002f;
     public float Cloud2Speed = 0.0000000007f;
@@ -17,7 +18,7 @@ public class GamePlayScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        desertSound.GetComponent<AudioSource>().volume = EnviromentGameData.Instance.playerSavedData.sfx;
 
     }
 

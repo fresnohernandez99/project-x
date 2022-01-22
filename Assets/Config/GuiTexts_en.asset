@@ -146,5 +146,67 @@ MonoBehaviour:
     m_Localized: Are you ready?
     m_Metadata:
       m_Items: []
+  - m_Id: 33
+    m_Localized: Critic!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34
+    m_Localized: Miss
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35
+    m_Localized: -Hello who's there?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37
+    m_Localized: -Oh! You are a young gentleman from the physical world.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 38
+    m_Localized: -My name is Rock. I assume you're here for the village feud.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39
+    m_Localized: -Oh no?! Are you only interested in fighting? That's crazy!!! Or
+      not?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40
+    m_Localized: -Everyone!! they want to save the color. Pffff! What nonsense!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41
+    m_Localized: -This world has no solution. Everything is black or white.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 42
+    m_Localized: -I'm not interested in color. Or am I interested?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43
+    m_Localized: -No no no... Yes!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44
+    m_Localized: -Let's make a Deal. Bring me color and I'll get you a very strong
+      opponent. Or not?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45
+    m_Localized: -Yes bring me color.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46
+    m_Localized: -I'm a good soul... Or am I?! HA HA HA HA HA HA HA....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47
+    m_Localized: Good Victory!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48
+    m_Localized: You lose
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

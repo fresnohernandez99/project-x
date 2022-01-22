@@ -14,11 +14,9 @@ public class BattleGuest : MonoBehaviour
 
     public void AnswerYes() {
         em.TriggerEvent(EventManager.ACCEPT_BATTLE, "");
-        Debug.Log("Answering yes");
     }
 
     public void AnswerNo() {
         em.TriggerEvent(EventManager.DECLINE_BATTLE, "");
-        Debug.Log("Answering no");
     }
 }

@@ -26,7 +26,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     void Update() 
-    { 
+    {
         Move();
 
         rays.transform.Rotate(0, 0, Time.deltaTime * 6f);
