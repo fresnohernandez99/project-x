@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GamePlayScript : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class GamePlayScript : MonoBehaviour
     public GameObject clouds3;
     public GameObject clouds4;
     public AudioSource desertSound;
+
+    public GameObject badGuyExplorer1;
+    public GameObject badGuyExplorer2;
 
     public float Cloud1Speed = 0.0000000002f;
     public float Cloud2Speed = 0.0000000007f;
@@ -19,7 +23,19 @@ public class GamePlayScript : MonoBehaviour
     void Start()
     {
         desertSound.GetComponent<AudioSource>().volume = EnviromentGameData.Instance.playerSavedData.sfx;
+        badGuyExplorer1.transform.position =
+            new Vector3(
+                badGuyExplorer1.transform.position.x + (Random.Range(-50, 50)),
+                badGuyExplorer1.transform.position.y,
+                badGuyExplorer1.transform.position.z
+                );
 
+        badGuyExplorer2.transform.position =
+        new Vector3(
+            badGuyExplorer2.transform.position.x + (Random.Range(-50, 50)),
+            badGuyExplorer2.transform.position.y,
+            badGuyExplorer2.transform.position.z
+            );
     }
 
     // Update is called once per frame

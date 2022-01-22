@@ -23,6 +23,9 @@ public class PlayerScript : MonoBehaviour
 
     void Start() { 
         rb.freezeRotation = true;
+        hud.GetComponent<GamePlayHud>().SetBuyActive(false);
+        hud.GetComponent<GamePlayHud>().SetAttackActive(false);
+        hud.GetComponent<GamePlayHud>().SetActionActive(false);
     }
 
     void Update() 
@@ -51,8 +54,8 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         switch(col.gameObject.tag){
-            case "Building":
-                hud.GetComponent<GamePlayHud>().SetActionActive(true);
+            case "Shop":
+                hud.GetComponent<GamePlayHud>().SetBuyActive(true);
                 break;
             case "BadGuy":
                 hud.GetComponent<GamePlayHud>().SetAttackActive(true);
@@ -71,8 +74,8 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerExit2D(Collider2D col)
     {
         switch(col.gameObject.tag){
-            case "Building":
-                hud.GetComponent<GamePlayHud>().SetActionActive(false);
+            case "Shop":
+                hud.GetComponent<GamePlayHud>().SetBuyActive(false);
                 break;
             case "BadGuy":
                 hud.GetComponent<GamePlayHud>().SetAttackActive(false);

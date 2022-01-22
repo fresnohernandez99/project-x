@@ -207,5 +207,14 @@ MonoBehaviour:
     m_Localized: Has perdido
     m_Metadata:
       m_Items: []
+  - m_Id: 49
+    m_Localized: "Comprar poci\xF3n de vida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Localized: Usa las flechas para moverte y click para interactuar. Debes estar
+      cerca de los objetos
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

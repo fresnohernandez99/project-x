@@ -8,11 +8,15 @@ public class GamePlayHud : MonoBehaviour
 {
     public GameObject attack;
     public GameObject action;
+    public GameObject buy;
+
     public GameObject playerClass;
     public GameObject playerName;
     public GameObject itemCount;
     public GameObject actualColor;
-    public GameObject actualColorIndicator; 
+    public GameObject actualColorIndicator;
+
+    public GameObject nextLevelText;
 
     public GameObject player;
 
@@ -30,6 +34,13 @@ public class GamePlayHud : MonoBehaviour
         var actualLevel = EnviromentGameData.Instance.playerSavedData.playerLevel;
         playerName.GetComponent<Text>().text = $"{actualName} ({actualLevel})";
 
+        var nextlevel = EnviromentGameData.Instance.playerSavedData.nextLevelPoints;
+        nextLevelText.GetComponent<Text>().text = $"Next level on {nextlevel}";
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         var potionCount = EnviromentGameData.Instance.playerSavedData.pi.healthPotions.ToString();
         itemCount.GetComponent<Text>().text = potionCount;
 
@@ -44,12 +55,6 @@ public class GamePlayHud : MonoBehaviour
             actualColorIndicator.GetComponent<Image>().color = new Color32(0, 0, (byte)money, 100);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetAttackActive(bool active){
         attack.SetActive(active); 
     }
@@ -58,8 +63,24 @@ public class GamePlayHud : MonoBehaviour
         action.SetActive(active); 
     }
 
+    public void SetBuyActive(bool active)
+    {
+        buy.SetActive(active);
+    }
+
     public void Attack()
     {
         player.GetComponent<PlayerScript>().AskForBattle();
+    }
+
+    public void Buy()
+    {
+        if (EnviromentGameData.Instance.playerSavedData.money >= 5)
+        {
+            EnviromentGameData.Instance.playerSavedData.money -= 5;
+            EnviromentGameData.Instance.playerSavedData.pi.healthPotions++;
+            SecurePlayerPrefs.SaveGameData();
+        }
+        //player.GetComponent<PlayerScript>().AskForBattle();
     }
 }

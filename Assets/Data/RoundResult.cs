@@ -30,9 +30,9 @@ public class RoundResult
     public bool[] midProbability = new bool[] { true, true, true, false, true, true };
     public bool[] hightProbability = new bool[] { true, false, true };
 
-    public ConfrontData PlayerWins(int player1Action, int player2Action)
+    public ConfrontData PlayerWins(int player1Action, int player2Action, bool isNpc)
     {
-        Debug.Log($"player1: {player1Action} player2: {player2Action}");
+        if (!isNpc) Debug.Log($"player1: {player1Action} player2: {player2Action}");
         var confrontData = new ConfrontData();
 
         if (player1Action == 2 && player2Action == 1)

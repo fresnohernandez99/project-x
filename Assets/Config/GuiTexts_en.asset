@@ -208,5 +208,14 @@ MonoBehaviour:
     m_Localized: You lose
     m_Metadata:
       m_Items: []
+  - m_Id: 49
+    m_Localized: Buy health potion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Localized: Use arrow keys to move and mouse click to interact. You most be
+      close to the objects.
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

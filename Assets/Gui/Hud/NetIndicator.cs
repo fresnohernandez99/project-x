@@ -14,6 +14,10 @@ public class NetIndicator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        EnviromentGameData.Instance.LoadInitialData(
+            SecurePlayerPrefs.GetJson<PlayerSavedData>(Constants.PLAYER_DATA_SAVED, Constants.PRIVATE_KEY)
+        );
+
         ClickRetray();
     }
 

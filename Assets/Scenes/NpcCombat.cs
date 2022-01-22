@@ -199,11 +199,11 @@ public class NpcCombat : MonoBehaviour {
     {
         if (isWinner)
         {
-            var exp = (int)EnviromentGameData.Instance.playerCombatData.enemy.playerLevel / 3;
+            var exp = (int)EnviromentGameData.Instance.playerCombatData.enemy.playerLevel*100 / 3;
             EnviromentGameData.Instance.playerSavedData.nextLevelPoints -= exp;
         } else
         {
-            var exp = (int)EnviromentGameData.Instance.playerCombatData.enemy.playerLevel / 6;
+            var exp = (int)EnviromentGameData.Instance.playerCombatData.enemy.playerLevel * 100 / 6;
             EnviromentGameData.Instance.playerSavedData.nextLevelPoints -= exp;
         }
         if (EnviromentGameData.Instance.playerSavedData.nextLevelPoints <= 0)
@@ -243,6 +243,7 @@ public class NpcCombat : MonoBehaviour {
             isWaiting = true;
             player1Animator.SetBool("isWaiting", true);
             em.StartListening(EventManager.WAIT_FOR_RESULT, new Action<string>(RoundResult));
+            Debug.Log("Listen");
             emulateBattleCoroutine = StartCoroutine(EmulateBattle());
         }
         
@@ -274,17 +275,25 @@ public class NpcCombat : MonoBehaviour {
 
     //Combat Events
     public void SelectAction(int action) {
+        //si no tiene posiones o no ha recibido danno
+        EnviromentGameData.Instance.playerCombatData.actionSelected = action;
+        Debug.Log($"{action}  {EnviromentGameData.Instance.playerCombatData.pi.healthPotions}  ${EnviromentGameData.Instance.playerCombatData.damageTaken > 0}");
         if (action == 4 && EnviromentGameData.Instance.playerCombatData.pi.healthPotions < 1)
         {
             //not have potions
-        } else
+            Debug.Log("No tienes pocion");
+        }
+        else if (action == 4 && EnviromentGameData.Instance.playerCombatData.damageTaken <= 0)
+        {
+            Debug.Log("No tienes que tomar pocion");
+        }
+        else
         {
             if (action == 4)
             {
                 EnviromentGameData.Instance.playerCombatData.pi.healthPotions--;
                 potionsCount.GetComponent<Text>().text = $"{EnviromentGameData.Instance.playerCombatData.pi.healthPotions}";
             }
-            EnviromentGameData.Instance.playerCombatData.actionSelected = action;
             HudAviable(false);
             isWaiting = true;
             player1ActionImage.GetComponent<Image>().overrideSprite = actionSprites[action - 1];
@@ -292,7 +301,7 @@ public class NpcCombat : MonoBehaviour {
             //wait for result
             player1Animator.SetBool("isWaiting", true);
             em.StartListening(EventManager.WAIT_FOR_RESULT, new Action<string>(RoundResult));
-
+            Debug.Log("Listen");
             emulateBattleCoroutine = StartCoroutine(EmulateBattle());
         }
     }
@@ -316,12 +325,14 @@ public class NpcCombat : MonoBehaviour {
         //winner
         var confrontDataPlayer1 = roundResult.PlayerWins(
                 EnviromentGameData.Instance.playerCombatData.actionSelected,
-                EnviromentGameData.Instance.playerCombatData.enemy.actionSelected
+                EnviromentGameData.Instance.playerCombatData.enemy.actionSelected,
+                false
         );
 
         var confrontDataPlayer2 = roundResult.PlayerWins(
                 EnviromentGameData.Instance.playerCombatData.enemy.actionSelected,
-                EnviromentGameData.Instance.playerCombatData.actionSelected
+                EnviromentGameData.Instance.playerCombatData.actionSelected,
+                true
         );
 
         var isWinner = confrontDataPlayer1.win;
@@ -359,7 +370,7 @@ public class NpcCombat : MonoBehaviour {
                         EnviromentGameData.Instance.playerCombatData.actionSelected,
                         EnviromentGameData.Instance.playerCombatData
                     );
-                    damageTaken = confrontDataPlayer1.damage;
+                    damageGiven = confrontDataPlayer1.damage;
                     Debug.Log($"Player 1 quitó: {damageGiven} vida");
                 }
             }
@@ -415,6 +426,7 @@ public class NpcCombat : MonoBehaviour {
 
     public void RoundResult(string resultJson)
     {
+        Debug.Log("stop Listen");
         em.StopListening(EventManager.WAIT_FOR_RESULT, new Action<string>(RoundResult));
         StopCoroutine(emulateBattleCoroutine);
         var result = JsonUtility.FromJson<RoundResult>(resultJson);

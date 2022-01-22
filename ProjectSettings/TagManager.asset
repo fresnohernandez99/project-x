@@ -8,6 +8,7 @@ TagManager:
   - Npc
   - OnlinePlayer
   - BadGuy
+  - Shop
   layers:
   - Default
   - TransparentFX

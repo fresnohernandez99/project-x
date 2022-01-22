@@ -203,6 +203,14 @@ MonoBehaviour:
     m_Key: LOSE_BATTLE
     m_Metadata:
       m_Items: []
+  - m_Id: 49
+    m_Key: BUY_HEALTH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50
+    m_Key: TUTO
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

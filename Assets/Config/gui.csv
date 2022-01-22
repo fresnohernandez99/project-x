@@ -46,3 +46,5 @@ CINE_10,45,-Yes bring me color.,-Sí traéme color.
 CINE_11,46,-I'm a good soul... Or am I?! HA HA HA HA HA HA HA....,-Soy una buena alma ... O no?!  JA JA JA JA ja ja ja....
 WIN_BATTLE,47,Good Victory!!!,Buena Victoria!!!
 LOSE_BATTLE,48,You lose,Has perdido
+BUY_HEALTH,49,Buy health potion,Comprar poción de vida
+TUTO,50,Use arrow keys to move and mouse click to interact. You most be close to the objects.,Usa las flechas para moverte y click para interactuar. Debes estar cerca de los objetos
