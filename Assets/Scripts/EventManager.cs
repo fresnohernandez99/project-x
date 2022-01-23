@@ -23,6 +23,10 @@ public class EventManager : Singleton<EventManager>
     //combat
     public const string WAIT_FOR_RESULT = "wait_for_result";
 
+    //online
+    public const string PLAYER_POSITIONS = "player_positions";
+
+
     public static Dictionary<string, Action<string>> eventDictionary;
 
     private void InitDict(){

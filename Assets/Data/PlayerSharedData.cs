@@ -14,7 +14,7 @@ public class PlayerSharedData : GameData
 
 	public bool isFighting = false;
 	
-    public Vector2 position = new Vector2(0, 0);
+    public Vector2 position = new Vector2(-16.02F, 13F);
     
 	public string selectedClass = "none_yet";
 

@@ -7,11 +7,10 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using System.Text.RegularExpressions;
 using UnityEngine.SceneManagement;
-using UnityEngine.Events;
 using System;
 using Random = UnityEngine.Random;
 
-public class NpcCombat : MonoBehaviour {
+public class OnlineCombat : MonoBehaviour {
 
     public GameObject timerText;
 
@@ -174,7 +173,6 @@ public class NpcCombat : MonoBehaviour {
 
         yield return new WaitForSeconds(2);
 
-        EnviromentGameData.Instance.playerCombatData = new PlayerCombatData();
         SceneManager.LoadScene(3);
 
         yield return null;
@@ -191,7 +189,6 @@ public class NpcCombat : MonoBehaviour {
 
         yield return new WaitForSeconds(2);
 
-        EnviromentGameData.Instance.playerCombatData = new PlayerCombatData();
         SceneManager.LoadScene(3);
 
         yield return null;
@@ -203,12 +200,10 @@ public class NpcCombat : MonoBehaviour {
         {
             var exp = (int)EnviromentGameData.Instance.playerCombatData.enemy.playerLevel*100 / 3;
             EnviromentGameData.Instance.playerSavedData.nextLevelPoints -= exp;
-            EnviromentGameData.Instance.playerSavedData.money += 50;
         } else
         {
             var exp = (int)EnviromentGameData.Instance.playerCombatData.enemy.playerLevel * 100 / 6;
             EnviromentGameData.Instance.playerSavedData.nextLevelPoints -= exp;
-            EnviromentGameData.Instance.playerSavedData.money += 10;
         }
         if (EnviromentGameData.Instance.playerSavedData.nextLevelPoints <= 0)
         {
@@ -240,19 +235,25 @@ public class NpcCombat : MonoBehaviour {
         CloseTimer();
 
         //seleccting default attack and wait for result
-        EnviromentGameData.Instance.playerCombatData.actionSelected = 1;
-        player1ActionImage.GetComponent<Image>().overrideSprite = actionSprites[0];
-        isWaiting = true;
-        player1Animator.SetBool("isWaiting", true);
-        em.StartListening(EventManager.WAIT_FOR_RESULT, new Action<string>(RoundResult));
-        Debug.Log("Listen");
-        emulateBattleCoroutine = StartCoroutine(EmulateBattle());
-
+        if (!isWaiting)
+        {
+            EnviromentGameData.Instance.playerCombatData.actionSelected = 1;
+            player1ActionImage.GetComponent<Image>().overrideSprite = actionSprites[0];
+            isWaiting = true;
+            player1Animator.SetBool("isWaiting", true);
+            em.StartListening(EventManager.WAIT_FOR_RESULT, new Action<string>(RoundResult));
+            Debug.Log("Listen");
+            emulateBattleCoroutine = StartCoroutine(EmulateBattle());
+        }
+        
     }
 
     public void FinishRound()
     {
         StopCoroutine(battleAnimationsCoroutine);
+
+        Debug.Log(EnviromentGameData.Instance.playerCombatData.playerLife.ToString());
+        Debug.Log(EnviromentGameData.Instance.playerCombatData.enemy.playerLife.ToString());
 
         if (EnviromentGameData.Instance.playerCombatData.playerLife - EnviromentGameData.Instance.playerCombatData.damageTaken <= 0)
         {
@@ -564,7 +565,6 @@ public class NpcCombat : MonoBehaviour {
     public void StartTimer(int sec) {
         clock.GetComponent<Animator>().SetBool("isRinging", false);
         timerText.GetComponent<Text>().text = sec.ToString();
-
         timeSeconds = sec;
         timeRunning = true;
         roundRunning = true;

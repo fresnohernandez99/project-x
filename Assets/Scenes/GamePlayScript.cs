@@ -1,7 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+using UnityEngine.UI;
+using UnityEngine.Events;
+using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+using System;
 using Random = UnityEngine.Random;
+using System.Linq;
 
 public class GamePlayScript : MonoBehaviour
 {
@@ -11,6 +20,10 @@ public class GamePlayScript : MonoBehaviour
     public GameObject clouds4;
     public AudioSource desertSound;
 
+    public GameObject myPrefab;
+
+    public GameObject[] onlinePLayers;
+
     public GameObject badGuyExplorer1;
     public GameObject badGuyExplorer2;
 
@@ -19,25 +32,54 @@ public class GamePlayScript : MonoBehaviour
     public float Cloud3Speed = 0.0000000005f;
     public float Cloud4Speed = 0.0000000006f;
 
+    EventManager em = (EventManager)EventManager.Instance;
+
     // Start is called before the first frame update
+
     void Start()
     {
         desertSound.GetComponent<AudioSource>().volume = EnviromentGameData.Instance.playerSavedData.sfx;
+        Debug.Log($"{EnviromentGameData.Instance.playerSavedData.sfx}");
         badGuyExplorer1.transform.position =
             new Vector3(
-                badGuyExplorer1.transform.position.x + (Random.Range(-50, 50)),
+                badGuyExplorer1.transform.position.x + (Random.Range(-20, 20)),
                 badGuyExplorer1.transform.position.y,
                 badGuyExplorer1.transform.position.z
                 );
 
         badGuyExplorer2.transform.position =
         new Vector3(
-            badGuyExplorer2.transform.position.x + (Random.Range(-50, 50)),
+            badGuyExplorer2.transform.position.x + (Random.Range(-20, 20)),
             badGuyExplorer2.transform.position.y,
             badGuyExplorer2.transform.position.z
             );
+        Debug.Log(badGuyExplorer2.ToString());
+        em.StartListening(EventManager.PLAYER_POSITIONS, new Action<string>(OnlinePLayers));
     }
 
+    public void OnlinePLayers(string data)
+    {
+        var positions = JsonUtility.FromJson<PositionsResponse>(data.ToString());
+
+        Debug.Log("Recibido arreglo de players");
+
+        var playerId = EnviromentGameData.Instance.playerSharedData.id;
+        PlayerSharedData[] otherPlayers = positions.data.Where(x => x.id != playerId).ToArray();
+
+        for (int i = 0; i < onlinePLayers.Length; i++)
+        {
+            if (otherPlayers.Length > i)
+            {
+                Debug.Log("-----" + i);
+                onlinePLayers[i].GetComponent<OnlineExplorerPlayer>().SetData(otherPlayers[i]);
+            }
+            else
+            {
+                onlinePLayers[i].GetComponent<OnlineExplorerPlayer>().Hide();
+            }
+        }
+    }
+    
     // Update is called once per frame
     void Update()
     {

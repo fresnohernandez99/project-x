@@ -38,6 +38,7 @@ public class NetIndicator : MonoBehaviour
     }
 
     public void ClickRetray(){
+        Debug.Log("trying");
         retrayBtn.SetActive(false);
         nm.TrayConnection();
         StartCoroutine(ShowRetrayBtn());

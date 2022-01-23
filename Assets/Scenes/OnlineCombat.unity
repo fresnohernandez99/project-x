@@ -736,7 +736,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540571598}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &149894361
 AudioSource:
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 627571265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de8d0cfff918f4c65b614f5fa2970596, type: 3}
+  m_Script: {fileID: 11500000, guid: f51fb36e5c85646f9b7c60bb0cc98f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1263951668}
@@ -1936,7 +1936,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540571598}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &673498380
 AudioSource:
@@ -2531,7 +2531,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 627571267}
-        m_TargetAssemblyTypeName: NpcCombat, Assembly-CSharp
+        m_TargetAssemblyTypeName: OnlineCombat, Assembly-CSharp
         m_MethodName: SelectAction
         m_Mode: 3
         m_Arguments:
@@ -3111,7 +3111,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 627571267}
-        m_TargetAssemblyTypeName: NpcCombat, Assembly-CSharp
+        m_TargetAssemblyTypeName: OnlineCombat, Assembly-CSharp
         m_MethodName: SelectAction
         m_Mode: 3
         m_Arguments:
@@ -4296,8 +4296,8 @@ Transform:
   m_LocalPosition: {x: 491.28293, y: 280.89523, z: -1588.5748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 673498379}
   - {fileID: 149894360}
+  - {fileID: 673498379}
   - {fileID: 1365509215}
   - {fileID: 1998392900}
   - {fileID: 629523654}
@@ -5115,7 +5115,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 627571267}
-        m_TargetAssemblyTypeName: NpcCombat, Assembly-CSharp
+        m_TargetAssemblyTypeName: OnlineCombat, Assembly-CSharp
         m_MethodName: SelectAction
         m_Mode: 3
         m_Arguments:
@@ -5827,7 +5827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 627571267}
-        m_TargetAssemblyTypeName: NpcCombat, Assembly-CSharp
+        m_TargetAssemblyTypeName: OnlineCombat, Assembly-CSharp
         m_MethodName: SelectAction
         m_Mode: 3
         m_Arguments:
